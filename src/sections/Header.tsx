@@ -7,8 +7,9 @@ import { Button } from "../../components/button";
 export const Header = () => {
   return (
     <header className="sticky top-0 z-50 py-4 leading-none  md:h-0 ">
-      <div className="container">
-        <div className="flex items-center justify-between p-2.5 border border-white/15 rounded-full max-w-[100%] mx-auto backdrop-blur">
+      <div className="w-[90%] md:w-[80%]  m-auto">
+        <div className="flex items-center justify-between p-2.5 border border-white/15 rounded-full max-w-[100%] mx-auto backdrop-blur relative">
+          <div className="bg-black/5 absolute inset-0 rounded-full -z-10 backdrop-blur"></div>
           <div>
             <div className="inline-flex items-center justify-center gap-1 p-1 border rounded-full w-25 border-white/15">
               <div className="h-[30px] w-[30px]">

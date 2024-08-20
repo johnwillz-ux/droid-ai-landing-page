@@ -177,7 +177,7 @@ export const Features = () => {
 
   return (
     <section>
-      <div className="container py-20 md:py-25 ">
+      <div className="w-[90%] m-auto md:container py-20 md:py-25 ">
         <GlobalHeading
           title="Explore Features"
           subTitle="Bring your cyberpunk dreams to life!"

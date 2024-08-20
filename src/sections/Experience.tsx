@@ -35,7 +35,7 @@ const aiImage = [
 export const Experience = () => {
   return (
     <section className="py-35">
-      <div className="container">
+      <div className="w-[90%] m-auto md:container">
         <GlobalHeading
           title="   The Future of Fashion."
           subTitle="   Check out these stunning images created by Droid AI."

@@ -37,7 +37,7 @@ const testimonials = [
 
 export const Testimonials = () => {
   return (
-    <section className="py-20 md:py-24">
+    <section className="py-20 md:py-24 w-[90%] m-auto md:container">
       <div className="container">
         <GlobalHeading
           title="User Reviews"

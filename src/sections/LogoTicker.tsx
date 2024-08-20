@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 
 export const LogoTicker = () => {
   return (
-    <section className="container h-[20vh] items-center flex">
+    <section className="w-[90%] m-auto md:container h-[20vh] items-center flex">
       <div className="flex items-center gap-8 overflow-hidden">
         <div className="flex flex-none">
           <h2 className="text-sm font-light md:text-lg text-white/80 font-tomorrow">

@@ -17,7 +17,7 @@ const socialLogos = [
 export const Footer = () => {
   return (
     <footer>
-      <section className="py-20">
+      <section className="py-20 w-[90%] m-auto md:container">
         <div className="container flex flex-col gap-5 md:items-center md:flex-row md:justify-between">
           <div className="flex flex-row items-center gap-1 ">
             <div className="w-8 border rounded-full w-25 border-white/15 p-0.5">
