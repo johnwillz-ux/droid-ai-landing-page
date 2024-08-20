@@ -92,10 +92,11 @@ export function Globe({ globeConfig, data }: WorldProps) {
   };
 
   useEffect(() => {
+    if (typeof window !== 'undefined') {
     if (globeRef.current) {
       _buildData();
       _buildMaterial();
-    }
+    }}
   }, [globeRef.current]);
 
   const _buildMaterial = () => {
@@ -153,6 +154,8 @@ export function Globe({ globeConfig, data }: WorldProps) {
   };
 
   useEffect(() => {
+
+    if (typeof window !== 'undefined') {
     if (globeRef.current && globeData) {
       globeRef.current
         .hexPolygonsData(countries.features)
@@ -165,7 +168,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
           return defaultProps.polygonColor;
         });
       startAnimation();
-    }
+    }}
   }, [globeData]);
 
   const startAnimation = () => {
@@ -207,9 +210,12 @@ export function Globe({ globeConfig, data }: WorldProps) {
   };
 
   useEffect(() => {
+    
     if (!globeRef.current || !globeData) return;
 
+    
     const interval = setInterval(() => {
+     
       if (!globeRef.current || !globeData) return;
       numbersOfRings = genRandomNumbers(
         0,
@@ -220,7 +226,9 @@ export function Globe({ globeConfig, data }: WorldProps) {
       globeRef.current.ringsData(
         globeData.filter((d, i) => numbersOfRings.includes(i))
       );
-    }, 2000);
+    },   2000);
+
+    
 
     return () => {
       clearInterval(interval);
@@ -238,9 +246,10 @@ export function WebGLRendererConfig() {
   const { gl, size } = useThree();
 
   useEffect(() => {
+    if (typeof window !== 'undefined') {
     gl.setPixelRatio(window.devicePixelRatio);
     gl.setSize(size.width, size.height);
-    gl.setClearColor(0xffaaff, 0);
+    gl.setClearColor(0xffaaff, 0);}
   }, []);
 
   return null;

@@ -1,13 +1,19 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Globe, World } from "@/components/ui/globe";
+// import { World } from "@/components/ui/globe";
 import { Button } from "../../components/button";
 import starsBg from "@/assets/stars.png";
 import { Cover } from "../components/ui/cover";
 import { useRef } from "react";
+import dynamic from "next/dynamic";
+
+
+const World = dynamic(() => import('@/components/ui/globe').then((mod) => mod.World), { ssr: false });
+
 
 export const Hero = () => {
+
   const sectionRef = useRef(null);
 
   const { scrollYProgress } = useScroll({
